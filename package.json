@@ -4,11 +4,14 @@
   "description": "This is a react.js library for implementing the dojah connect gateway.",
   "author": "Nna Chijioke E. <nnachijioke@yahoo.com>",
   "license": "none",
-  "repository": "https://github.com/eltasolutions/react-dojah",
-  "bugs": {
-    "url": "https://github.com/eltasolutions/react-dojah/issues"
+  "repository" : {
+    "type" : "git",
+    "url": "git+https://github.com/cjayprime/react-dojah.git"
   },
-  "homepage": "https://github.com/eltasolutions/react-dojah#readme",
+  "bugs": {
+    "url": "https://github.com/cjayprime/react-dojah/issues"
+  },
+  "homepage": "https://github.com/cjayprime/react-dojah#readme",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
