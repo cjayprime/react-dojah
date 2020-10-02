@@ -1,11 +1,11 @@
 {
   "name": "react-dojah",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a react.js library for implementing the dojah connect gateway.",
   "author": "Nna Chijioke E. <nnachijioke@yahoo.com>",
   "license": "none",
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "git+https://github.com/cjayprime/react-dojah.git"
   },
   "bugs": {
