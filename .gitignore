@@ -62,3 +62,5 @@ typings/
 
 yarn.lock
 !example/yarn.lock
+
+dist

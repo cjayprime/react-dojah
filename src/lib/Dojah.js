@@ -24,7 +24,10 @@ class Dojah extends Component {
 
   start = () => {
     const { response } = this.props
-    const { uri } = Dojah.config
+    let { uri } = Dojah.config
+    if (window.dojah && window.dojah.uri) {
+      uri = window.dojah.uri
+    }
     response('loading')
     this.script = document.createElement('script')
     this.script.addEventListener('load', this.load)
@@ -69,7 +72,7 @@ class Dojah extends Component {
 }
 
 Dojah.config = {
-  uri: 'https://services.elta.com.ng/doja/connect.js'
+  uri: 'https://widget.dojah.io/widget.js'
 }
 
 Dojah.propTypes = {
