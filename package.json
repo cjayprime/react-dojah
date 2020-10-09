@@ -10,6 +10,9 @@
   "bugs": {
     "url": "https://github.com/cjayprime/react-dojah/issues"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "homepage": "https://github.com/cjayprime/react-dojah#readme",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
