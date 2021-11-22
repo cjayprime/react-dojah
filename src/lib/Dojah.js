@@ -45,10 +45,11 @@ class Dojah extends Component {
   }
 
   open = () => {
-    const { appID, publicKey, response } = this.props
+    const { appID, publicKey, type, response } = this.props
     const options = {
       app_id: appID,
       p_key: publicKey,
+      type,
       onSuccess: (data) => {
         response('success', data)
       },
@@ -78,6 +79,7 @@ Dojah.config = {
 Dojah.propTypes = {
   appID: PropTypes.string.isRequired,
   publicKey: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   response: PropTypes.func.isRequired
 }
 
