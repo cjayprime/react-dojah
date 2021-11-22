@@ -8,7 +8,7 @@
     "url": "https://github.com/cjayprime/react-dojah/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org"
   },
   "homepage": "https://github.com/cjayprime/react-dojah#readme",
   "main": "dist/index.js",
