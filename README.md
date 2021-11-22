@@ -39,6 +39,13 @@ const App = () => {
    */
   const publicKey = "test_pk_OvAQ5aAhwATSKPzOX5vB1Fbv8";
   /**
+   *  This is the widget type you'd like to load
+   *  (go to your dashboard at
+   *  https://dojah.io/dashboard to enable different
+   *  widget types)
+   */
+  const type = "financial";
+  /**
    * @param {String} type
    * This method receives the type
    * The type can only be one of:
@@ -62,6 +69,7 @@ const App = () => {
     <Dojah
       response={response}
       appID={appID}
+      type={type}
       publicKey={publicKey}
     />
   );
