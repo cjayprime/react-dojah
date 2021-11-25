@@ -24,7 +24,7 @@ const App = () => {
    *  https://dojah.io/dashboard to enable different
    *  widget types)
    */
-  const type = "financial";
+  const type = "link";
 
   /**
    * @param {String} type
