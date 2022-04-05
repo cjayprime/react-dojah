@@ -28,16 +28,53 @@ const App = () => {
 
   /**
    *  These are the configuration options
-   *  available to you possible options are:
-   *  {debug: BOOL, otp: BOOL, selfie: BOOL}
-   * 
+   *  available to you are:
+   *  {debug: BOOL, pages: ARRAY[page: STRING, config: OBJECT]}
+   *
+   *  The config object is as defined below
+   *
    *  NOTE: The otp and selfie options are only
    *  available to the `verification` widget
    */
   const config = {
     debug: true,
-    otp: type === 'verification',
-    selfie: type === 'verification',
+    pages: [
+      {
+        page: 'government-data',
+        config: {
+          bvn: true,
+          nin: false,
+          dl: false,
+          mobile: false,
+          otp: false,
+          selfie: false,
+        },
+      },
+      {page: 'selfie'},
+      {page: 'id', config: {passport: false, dl: true}},
+    ],
+  };
+
+  /**
+   *  These are the user's data to verify, options
+   *  available to you possible options are:
+   *  {first_name: STRING, last_name: STRING, dob: DATE STRING}
+   *
+   *  NOTE: Passing all the values will automatically skip
+   *  the user-data page (thus the commented out `last_name`)
+   */
+  const userData = {
+    first_name: 'Chijioke',
+    last_name: '', // 'Nna'
+    dob: '2022-05-01',
+  };
+
+  /**
+   *  These are the metadata options
+   *  You can pass any values within the object
+   */
+  const metadata = {
+    user_id: '121',
   };
 
   /**
@@ -65,6 +102,8 @@ const App = () => {
       response={response}
       appID={appID}
       type={type}
+      userData={userData}
+      metadata={metadata}
       publicKey={publicKey}
       config={config}
     />
