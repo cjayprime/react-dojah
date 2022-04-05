@@ -101,11 +101,11 @@ const App = () => {
     <Dojah
       response={response}
       appID={appID}
+      publicKey={publicKey}
       type={type}
+      config={config}
       userData={userData}
       metadata={metadata}
-      publicKey={publicKey}
-      config={config}
     />
   );
 }
