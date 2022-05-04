@@ -54,6 +54,17 @@ class Dojah extends Component {
       config,
       metadata,
       user_data: userData,
+      _getLocation: function () {
+        return new Promise(function (resolve) {
+          navigator.geolocation.getCurrentPosition(function (location) {
+            resolve({
+              latitude: location.coords.latitude,
+              longitude: location.coords.longitude,
+              accuracy: location.coords.accuracy
+            })
+          })
+        })
+      },
       onSuccess: (data) => {
         response('success', data)
       },
