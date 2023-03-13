@@ -45,7 +45,7 @@ class Dojah extends Component {
   }
 
   open = () => {
-    const { appID, publicKey, type, response, config, metadata, userData } =
+    const { appID, publicKey, type, response, config, metadata, userData, govData } =
       this.props
     const options = {
       app_id: appID,
@@ -54,6 +54,7 @@ class Dojah extends Component {
       config,
       metadata,
       user_data: userData,
+      gov_data: govData,
       _getLocation: function () {
         return new Promise(function (resolve) {
           navigator.geolocation.getCurrentPosition(function (location) {
