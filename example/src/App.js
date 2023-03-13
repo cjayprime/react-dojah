@@ -50,8 +50,8 @@ const App = () => {
           selfie: false,
         },
       },
-      {page: 'selfie'},
-      {page: 'id', config: {passport: false, dl: true}},
+      { page: 'selfie' },
+      { page: 'id', config: { passport: false, dl: true } },
     ],
   };
 
@@ -77,6 +77,13 @@ const App = () => {
     user_id: '121',
   };
 
+  const govData = {
+    bvn: "456789654323",
+    nin: "234567543233",
+    dl: "3243546768767453423",
+    mobile: "08034456679"
+  }
+
   /**
    * @param {String} type
    * This method receives the type
@@ -87,11 +94,11 @@ const App = () => {
    */
   const response = (type, data) => {
     console.log(type, data);
-    if(type === 'success'){
-    }else if(type === 'error'){
-    }else if(type === 'close'){
-    }else if(type === 'begin'){
-    }else if(type === 'loading'){
+    if (type === 'success') {
+    } else if (type === 'error') {
+    } else if (type === 'close') {
+    } else if (type === 'begin') {
+    } else if (type === 'loading') {
     }
   }
 
@@ -106,6 +113,7 @@ const App = () => {
       config={config}
       userData={userData}
       metadata={metadata}
+      govData={govData}
     />
   );
 }
