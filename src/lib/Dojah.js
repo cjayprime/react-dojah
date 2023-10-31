@@ -19,7 +19,7 @@ class Dojah extends Component {
   error = () => {
     const { response } = this.props
     response('error')
-    document.head.removeChild(this.script)
+    //document.head.removeChild(this.script)
   }
 
   start = () => {
@@ -41,7 +41,7 @@ class Dojah extends Component {
   stop = () => {
     this.script.removeEventListener('load', this.load)
     this.script.removeEventListener('error', this.error)
-    document.head.removeChild(this.script)
+    //document.head.removeChild(this.script)
   }
 
   open = () => {
